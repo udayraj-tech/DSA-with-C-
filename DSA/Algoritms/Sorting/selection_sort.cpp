@@ -12,7 +12,12 @@ void printArray(vector<int> &arr) {
 void selectionSort(vector<int> &arr, int n){
     for(int i = 0; i < n - 1; i++ ){
         int min = i;
+
+        cout << endl;
+        cout << "Round: " << i + 1 << endl; 
+        
         for(int j = i + 1; j < n; j++){
+            printArray(arr);
             if(arr[j] < arr[min]){
                 min = j;
             }
