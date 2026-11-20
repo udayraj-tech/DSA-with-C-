@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+bool isSorted(int *arr, int n){
+    if (n == 1 || n == 0){
+        return true;
+    }
+    if (arr[0] > arr[1]){
+        return false;
+    }
+    else{
+        bool ans = isSorted(arr + 1, n - 1);
+        return ans;
+    }
+    
+}
+
+int main(){
+    int arr[5] = {1,4,7,11,12};
+    bool ans = isSorted(arr, 5);
+
+    if(ans){
+        cout<< "Sorted" << endl;
+    }
+    else{
+        cout << "Not Sorted" << endl;
+    }  
+} 
