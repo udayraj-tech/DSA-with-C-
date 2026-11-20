@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// ham yaha par int n (size of array) dene ki jarurat nahi hai waise hi chal jati hai yeh code
+
 bool binarySearch(int *arr, int s, int e, int n, int key){
     int mid = s + (e - s)/2;
     // base case
