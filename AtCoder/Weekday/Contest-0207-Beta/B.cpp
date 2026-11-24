@@ -6,7 +6,33 @@ using namespace std;
 #define endl '\n' // endl se fast hota hai kyunki flush nahi karta
 
 void solve() {
-    // Apna main logic yahan likho
+    int N, M;
+    cin >> N >> M;
+
+    vector<string> A(N);
+    for(int idx = 0; idx < N; idx++){
+        cin >> A[idx];
+    }
+
+    for(int i = 0; i < N; i++){
+        bool found = false;
+        int ans = 0;
+
+        for(int j = 0; j < M; j++){
+            if(A[i][j] == 'o'){
+                found = true;
+                ans = j + 1;
+                break;
+            } 
+        }
+        if(found){
+            cout << ans << '\n';
+        }
+        else{
+            cout << -1 << '\n';
+        }
+        
+    }
     
 }
 
@@ -15,7 +41,6 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t; // Agar question mein sirf 1 test case ho, toh is line ko comment kar do
     while (t--) {
         solve();
     }
