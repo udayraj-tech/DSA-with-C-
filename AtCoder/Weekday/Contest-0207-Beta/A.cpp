@@ -6,7 +6,16 @@ using namespace std;
 #define endl '\n' // endl se fast hota hai kyunki flush nahi karta
 
 void solve() {
-    // Apna main logic yahan likho
+    int A, B, C;
+    cin >> A >> B >> C;
+
+    if(A + B == C){
+        cout <<"Yes";
+    
+    }
+    else{
+        cout << "No";
+    }
     
 }
 
@@ -15,7 +24,6 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t; // Agar question mein sirf 1 test case ho, toh is line ko comment kar do
     while (t--) {
         solve();
     }
