@@ -8,25 +8,33 @@ using namespace std;
 class Solution {
 public:
     bool canAliceWin(int n) {
-        int ans = 0;
-        while(n > 0){
-            ans = n - 10;
+        int stone = 10;
+        int count = 0;
+        while(n >= stone){ 
+            n = n - stone--;
+            count++; 
         }
-        
+        if(count % 2 == 0){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 };
 
-bool solve() {
+void solve() {
     Solution obj;
     int n;
     cin >> n;
     int ans = obj.canAliceWin(n);
+
     if(ans){
-        return true;
+        cout << "true";
+    }else{
+        cout << "false";
     }
-    else{
-        return false;
-    }
+
 
 }
 
